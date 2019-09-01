@@ -16,6 +16,8 @@ services:
       - --config
       - ./config/nameko-config.yaml
       - helloworld
+    volumes:
+      - ./:/usr/src/app:rw
   shell:
     <<: *nameko
     command:
