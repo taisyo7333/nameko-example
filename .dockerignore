@@ -1,0 +1,9 @@
+# Mac
+.DS_Store
+
+# git
+.git
+.gitignore
+
+# python
+__pycache__

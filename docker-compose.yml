@@ -11,17 +11,17 @@ services:
       context: .
       dockerfile: Dockerfile
     command:
-      - nameko
+      - pipenv
       - run
-      - --config
-      - ./config/nameko-config.yaml
+      - start_nameko
       - helloworld
     volumes:
       - ./:/usr/src/app:rw
+    links:
+      - rabbitmq
   shell:
     <<: *nameko
     command:
-      - nameko
-      - shell
-      - --config
-      - ./config/nameko-config.yaml
+      - pipenv
+      - run
+      - shell_nameko
