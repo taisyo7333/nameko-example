@@ -4,6 +4,7 @@ import random
 
 from nameko.rpc import rpc
 
+
 class GreetingService:
     name = "greeting_service"
 
